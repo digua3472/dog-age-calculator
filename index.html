@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">狗狗年齡換算 - 預覽</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="dog-img-wrapper">
+        <!-- 改為彩色插圖（可替換成你喜歡的 SVG/PNG） -->
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/194/194279.png"
+          alt="彩色狗狗"
+          class="dog-img"
+        />
+      </div>
+
+      <div class="card">
+        <h1 id="main-title">狗狗年齡換算</h1>
+
+        <label for="dog-name">狗狗名字：</label>
+        <input type="text" id="dog-name" placeholder="例如：妙麗" />
+
+        <label for="dog-birthday">生日：</label>
+        <input type="date" id="dog-birthday" />
+
+        <button id="calc-btn">開始計算</button>
+
+        <div class="hint">
+          💡 輸入日期後按下按鈕，再重新整理頁面，生日欄位會自動帶回上次的值。
+        </div>
+
+        <div id="result" class="result hidden" role="status" aria-live="polite">
+          <div class="desc-text" id="desc-text">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

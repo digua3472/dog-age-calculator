@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #2828ff, #3a006f);
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+}
+
+/* 插圖白色圓底（彩色圖案） */
+.dog-img-wrapper {
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto -75px auto;
+  position: relative;
+  z-index: 10;
+}
+
+.dog-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+/* 白底卡片 */
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 95px 30px 40px 30px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* 欄位與按鈕等寬 */
+input[type='text'],
+input[type='date'],
+button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type='text'],
+input[type='date'] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, #4a4aff, #6a6aff);
+  transition: transform 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.995);
+}
+button:hover {
+  transform: scale(1.02);
+}
+
+.hint {
+  background: #eee;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.result {
+  margin-top: 25px;
+  padding: 28px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #ffcbb3, #ffb499);
+  border-radius: 12px;
+}
+
+.result.hidden {
+  display: none;
+}
+
+.age-number {
+  font-size: 46px;
+  font-weight: 800;
+  color: red;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.desc-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* small screens tweaks */
+@media (max-width: 420px) {
+  .dog-img-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto -60px auto;
+  }
+  .dog-img {
+    width: 85px;
+    height: 85px;
+  }
+  .card {
+    padding: 80px 20px 30px 20px;
+  }
+  .age-number {
+    font-size: 40px;
+  }
+}
